@@ -17,6 +17,10 @@ nav{
     display: flex;
 }
 
+div{
+    display: block;
+}
+
 ul{
     display: flex;
 }
@@ -224,6 +228,7 @@ h2{
 
 .books{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book{
