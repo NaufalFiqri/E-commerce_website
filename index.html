@@ -4,364 +4,319 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>Naufal Fiqri</title>
     <link rel="stylesheet" href="styles.css" />
     <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      src="https://kit.fontawesome.com/76dff9548a.js"
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("MjHwD2HkfcBCans5r");
+   })();
+</script>
   </head>
-  <body>
-    <section id="landing">
-      <nav>
-        <div class="nav__container">
-          <img class="logo" src="./assets/Library.svg" alt="" />
-          <ul class="nav__links">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link no-cursor" >Contact</a></li>
-            <li><a href="#recent" class="nav__link nav__link--primary">Books</a></li>
-          </ul>
-          <button class="btn__menu" onclick="openMenu()">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-              <i class="fas fa-times"></i>
-            </button>
-            <ul class="menu__links">
-              <li class="menu__list">
-                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
-              </li>
-              <li class="menu__list">
-                <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
-              </li>
-              <li class="menu__list">
-                <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-      <header>
-        <div class="header__container">
-          <div class="header__description">
-            <h1>Malaysia's most awarded online library platform</h1>
-            <h2>
-              Find your dream book with <span class="purple">Library</span>
-            </h2>
-            <a href="#features">
-              <button class="btn">Browse Books</button>
-            </a>
+
+  <body>
+    <section id="landing__page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img id="personal__logo" src="./assets/logo.svg" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor "
+              ><i class="fas fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title orange">I'm Naufal Fiqri</h1>
+          <p class="header__para">
+            I'm a
+            <b class="orange">Frontend Software Engineer</b>
+            with a strong passion for building web applications with great user
+            experiences.
+            <br />Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://github.com/NaufalFiqri"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/naufal-fiqri-0a96151a3/"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="assets\NFF Resume.pdf" target="_blank" class="social__link click"
+              ><i class="fa-solid fa-file-pdf"></i
+            ></a>
           </div>
-          <figure class="header__img--wrapper">
-            <img src="./assets/Undraw_Books.svg" alt="" />
-          </figure>
         </div>
       </header>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__sub-title--about">Here's a bit about me</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+          <p class="modal__para">
+            I'm a 21 year-old Malaysian <span class="orange">frontend software engineer</span> with a strong passion for developing websites with great <span class="orange">user experiences.</span>
+            <br class="modal__para para2">
+            I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most <span class="orange">talented</span> and <span class="orange">experienced</span> software engineers every day.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="">
+              <span class="language__name">HTML</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea type="text" name="message" class="input" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+        </div>
+      </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/triangle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/semi circle.svg" class="shape shape--6">
+      <img src="./assets/squiggly.svg" class="shape shape--7">
+      <img src="./assets/circle.svg" class="shape shape--8">
     </section>
 
-    <main>
-      <section id="highlights">
-        <div class="container">
-          <div class="row">
-            <h2 class="section__title">
-              Why choose <span class="purple">Library</span>
-            </h2>
-          </div>
-          <div class="highlight__wrapper">
-            <div class="highlight">
-              <div class="highlight__img">
-                <i class="fas fa-bolt"></i>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/skysavvy.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg">
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      Sky Savvy
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Html, CSS, JavaScript
+                    </h4>
+                    <p class="project__description--para">
+                      Skysavvy is an innovative weather forecasting website designed to provide users with comprehensive and accurate weather information. With a user-friendly interface and advanced features, Skysavvy aims to deliver a seamless and intuitive experience for individuals seeking up-to-date weather forecasts and related data.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://github.com/NaufalFiqri/prototype-3" class="project__description--link" target="_blank">
+                        <i class="fa-brands fa-github"></i
+                      ></a>
+                      <a href="https://sky-savvy.netlify.app/#/current-location" class="project__description--link" target="_blank">
+                        <i class="fa-solid fa-link"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 class="highlight_subtitle">Easy and Quick</h3>
-              <p class="highlight__para">
-                Get access to the book you purchased online instantly.
-              </p>
-            </div>
-            <div class="highlight">
-              <div class="highlight__img">
-                <i class="fas fa-book-open"></i>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/e-commerce.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg">
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      E-commerce library
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Html, CSS, JavaScript
+                    </h4>
+                    <p class="project__description--para">
+                      The e-commerce library website is an online platform where book lovers can explore, buy, and borrow a wide range of physical and digital books. It offers a vast collection of books organized by genres and authors, making it easy for users to find and enjoy their favorite reads.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://github.com/NaufalFiqri/E-commerce_website" class="project__description--link" target="_blank">
+                        <i class="fa-brands fa-github"></i
+                      ></a>
+                      <a href="https://trial-e-commerce.netlify.app/" class="project__description--link" target="_blank">
+                        <i class="fa-solid fa-link"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 class="highlight_subtitle">10,000+ Books</h3>
-              <p class="highlight__para">
-                Library has book in all your favourite categories.
-              </p>
-            </div>
-            <div class="highlight">
-              <div class="highlight__img">
-                <i class="fas fa-tags"></i>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/emotion system.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg">
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      Emotion detection system
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Jupyter notebook, python
+                    </h4>
+                    <p class="project__description--para">
+                      This project detects and recognizes human facial emotions using Artificial Intelligence (AI) techniques like Deep Learning (DL) and Convolutional Neural Network (CNN). The development follows a Project Management Plan (PMP) that includes Gantt Charts, Milestone Charts, and Work Breakdown Structure (WBS) for better organization. The PMP involves collaboration with a third-party organization for simulation purposes.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://github.com/NaufalFiqri/emotion_detection_system" class="project__description--link" target="_blank">
+                        <i class="fa-brands fa-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 class="highlight_subtitle">Affordable</h3>
-              <p class="highlight__para">
-                Get your hands on popular books for as little as RM10.
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="features">
-        <div class="container">
-          <div class="row">
-            <h2 class="section__title">
-              Featured <span class="purple">Books</span>
-            </h2>
-            <div class="books">
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img
-                    class="book__img"
-                    src="./assets/crack the coding interview.png"
-                    alt=""
-                  />
-                </figure>
-                <div class="book__title">Crack the Coding Interview</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img
-                    class="book__img"
-                    src="./assets/atomic habits.jpg"
-                    alt=""
-                  />
-                </figure>
-                <div class="book__title">Atomic Habits</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/deep work.jpeg" alt="" />
-                </figure>
-                <div class="book__title">Deep Work</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img
-                    class="book__img"
-                    src="./assets/david goggins.jpeg"
-                    alt=""
-                  />
-                </figure>
-                <div class="book__title">Can't Hurt Me</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="recent">
-        <div class="container">
-          <div class="row">
-            <h2 class="section__title">
-              Latest <span class="purple">Books</span>
-            </h2>
-            <div class="books">
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-1.jpeg" alt="" />
-                </figure>
-                <div class="book__title">The 10X Rule</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-2.jpeg" alt="" />
-                </figure>
-                <div class="book__title">Be Obsessed Or Be Average</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-3.jpeg" alt="" />
-                </figure>
-                <div class="book__title">Rich Dad Poor Dad</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-4.jpeg" alt="" />
-                </figure>
-                <div class="book__title">Cashflow Quadrant</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-5.jpeg" alt="" />
-                </figure>
-                <div class="book__title">48 Laws Of Power</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-6.jpeg" alt="" />
-                </figure>
-                <div class="book__title">The 5 Second Rule</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-7.jpg" alt="" />
-                </figure>
-                <div class="book__title">Your Next Five Moves</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-              <div class="book">
-                <figure class="book__img--wrapper">
-                  <img class="book__img" src="./assets/book-8.jpeg" alt="" />
-                </figure>
-                <div class="book__title">Mastery</div>
-                <div class="book__ratings">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half alt"></i>
-                </div>
-                <div class="book__price">
-                  <span class="book__price--normal">RM59.99</span> RM24.99
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="explore">
-        <div class="container">
-          <div class="row row__column">
-            <h2 class="section__title">
-              Explore more <span class="purple">Books</span>
-            </h2>
-            <a href="#features">
-              <button class="btn">Browse Books</button>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
+    
     <footer>
       <div class="container">
-        <div class="row row__column">
-          <a href="#">
+        <div class="row footer__row">
+          <a href="#" class="footer__anchor">
             <figure class="footer__logo">
-              <img
-                src="./assets/Library.svg"
-                class="footer__logo--img"
-                alt=""
-              />
+              <img class="footer__logo--img" src="./assets/logo.svg" alt="" />
             </figure>
+            <span class="footer__logo--popper">
+              Top
+              <i class="fas fa-arrow-up"></i>
+            </span>
           </a>
-          <div class="footer__list">
-            <a href="" class="footer__link">Home</a>
-            <a href="" class="footer__link no-cursor">About</a>
-            <a href="" class="footer__link">Books</a>
-            <a href="" class="footer__link no-cursor">Contact</a>
+          <div class="footer__social--list">
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            GitHub
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Linkedin
+            </a>
+            <a href="#" onclick="toggleModal()" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Contact
+            </a>
+              <a href="#" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white">
+              Resume
+            </a>
           </div>
-          <div class="footer__copyright">Copyright &copy: 2022 Library</div>
+          <div class="footer__copyright">
+            Copyright &#169 2022 Naufal Fiqri
+          </div>
         </div>
       </div>
     </footer>
